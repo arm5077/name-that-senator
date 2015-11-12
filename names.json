@@ -1,0 +1,702 @@
+[
+  {
+    "Region":"New Hampshire",
+    "Party":"R",
+    "Name":"Kelly Ayotte",
+    "Last_name":"Ayotte",
+    "Gender":"F"
+  },
+  {
+    "Region":"Wisconsin",
+    "Party":"D",
+    "Name":"Tammy Baldwin",
+    "Last_name":"Baldwin",
+    "Gender":"F"
+  },
+  {
+    "Region":"California",
+    "Party":"D",
+    "Name":"Barbara Boxer",
+    "Last_name":"Boxer",
+    "Gender":"F"
+  },
+  {
+    "Region":"Washington",
+    "Party":"D",
+    "Name":"Maria Cantwell",
+    "Last_name":"Cantwell",
+    "Gender":"F"
+  },
+  {
+    "Region":"West Virginia",
+    "Party":"R",
+    "Name":"Shelley Moore Capito",
+    "Last_name":"Capito",
+    "Gender":"F"
+  },
+  {
+    "Region":"Maine",
+    "Party":"R",
+    "Name":"Susan Collins",
+    "Last_name":"Collins",
+    "Gender":"F"
+  },
+  {
+    "Region":"Iowa",
+    "Party":"R",
+    "Name":"Joni Ernst",
+    "Last_name":"Ernst",
+    "Gender":"F"
+  },
+  {
+    "Region":"California",
+    "Party":"D",
+    "Name":"Dianne Feinstein",
+    "Last_name":"Feinstein",
+    "Gender":"F"
+  },
+  {
+    "Region":"Nebraska",
+    "Party":"R",
+    "Name":"Deb Fischer",
+    "Last_name":"Fischer",
+    "Gender":"F"
+  },
+  {
+    "Region":"New York",
+    "Party":"D",
+    "Name":"Kirsten Gillibrand",
+    "Last_name":"Gillibrand",
+    "Gender":"F"
+  },
+  {
+    "Region":"North Dakota",
+    "Party":"D",
+    "Name":"Heidi Heitkamp",
+    "Last_name":"Heitkamp",
+    "Gender":"F"
+  },
+  {
+    "Region":"Hawaii",
+    "Party":"D",
+    "Name":"Mazie Hirono",
+    "Last_name":"Hirono",
+    "Gender":"F"
+  },
+  {
+    "Region":"Minnesota",
+    "Party":"D",
+    "Name":"Amy Klobuchar",
+    "Last_name":"Klobuchar",
+    "Gender":"F"
+  },
+  {
+    "Region":"Missouri",
+    "Party":"D",
+    "Name":"Claire McCaskill",
+    "Last_name":"McCaskill",
+    "Gender":"F"
+  },
+  {
+    "Region":"Maryland",
+    "Party":"D",
+    "Name":"Barbara Mikulski",
+    "Last_name":"Mikulski",
+    "Gender":"F"
+  },
+  {
+    "Region":"Alaska",
+    "Party":"R",
+    "Name":"Lisa Murkowski",
+    "Last_name":"Murkowski",
+    "Gender":"F"
+  },
+  {
+    "Region":"Washington",
+    "Party":"D",
+    "Name":"Patty Murray",
+    "Last_name":"Murray",
+    "Gender":"F"
+  },
+  {
+    "Region":"New Hampshire",
+    "Party":"D",
+    "Name":"Jeanne Shaheen",
+    "Last_name":"Shaheen",
+    "Gender":"F"
+  },
+  {
+    "Region":"Michigan",
+    "Party":"D",
+    "Name":"Debbie Stabenow",
+    "Last_name":"Stabenow",
+    "Gender":"F"
+  },
+  {
+    "Region":"Massachusetts",
+    "Party":"D",
+    "Name":"Elizabeth Warren",
+    "Last_name":"Warren",
+    "Gender":"F"
+  },
+  {
+    "Region":"Tennessee",
+    "Party":"R",
+    "Name":"Lamar Alexander",
+    "Last_name":"Alexander",
+    "Gender":"M"
+  },
+  {
+    "Region":"Wyoming",
+    "Party":"R",
+    "Name":"John Barrasso",
+    "Last_name":"Barrasso",
+    "Gender":"M"
+  },
+  {
+    "Region":"Colorado",
+    "Party":"D",
+    "Name":"Michael Bennet",
+    "Last_name":"Bennet",
+    "Gender":"M"
+  },
+  {
+    "Region":"Connecticut",
+    "Party":"D",
+    "Name":"Richard Blumenthal",
+    "Last_name":"Blumenthal",
+    "Gender":"M"
+  },
+  {
+    "Region":"Missouri",
+    "Party":"R",
+    "Name":"Roy Blunt",
+    "Last_name":"Blunt",
+    "Gender":"M"
+  },
+  {
+    "Region":"New Jersey",
+    "Party":"D",
+    "Name":"Cory Booker",
+    "Last_name":"Booker",
+    "Gender":"M"
+  },
+  {
+    "Region":"Arkansas",
+    "Party":"R",
+    "Name":"John Boozman",
+    "Last_name":"Boozman",
+    "Gender":"M"
+  },
+  {
+    "Region":"Ohio",
+    "Party":"D",
+    "Name":"Sherrod Brown",
+    "Last_name":"Brown",
+    "Gender":"M"
+  },
+  {
+    "Region":"North Carolina",
+    "Party":"R",
+    "Name":"Richard Burr",
+    "Last_name":"Burr",
+    "Gender":"M"
+  },
+  {
+    "Region":"Maryland",
+    "Party":"D",
+    "Name":"Ben Cardin",
+    "Last_name":"Cardin",
+    "Gender":"M"
+  },
+  {
+    "Region":"Delaware",
+    "Party":"D",
+    "Name":"Tom Carper",
+    "Last_name":"Carper",
+    "Gender":"M"
+  },
+  {
+    "Region":"Pennsylvania",
+    "Party":"D",
+    "Name":"Bob Casey, Jr.",
+    "Last_name":"Casey",
+    "Gender":"M"
+  },
+  {
+    "Region":"Louisiana",
+    "Party":"R",
+    "Name":"Bill Cassidy",
+    "Last_name":"Cassidy",
+    "Gender":"M"
+  },
+  {
+    "Region":"Indiana",
+    "Party":"R",
+    "Name":"Dan Coats",
+    "Last_name":"Coats",
+    "Gender":"M"
+  },
+  {
+    "Region":"Mississippi",
+    "Party":"R",
+    "Name":"Thad Cochran",
+    "Last_name":"Cochran",
+    "Gender":"M"
+  },
+  {
+    "Region":"Delaware",
+    "Party":"D",
+    "Name":"Chris Coons",
+    "Last_name":"Coons",
+    "Gender":"M"
+  },
+  {
+    "Region":"Tennessee",
+    "Party":"R",
+    "Name":"Bob Corker",
+    "Last_name":"Corker",
+    "Gender":"M"
+  },
+  {
+    "Region":"Texas",
+    "Party":"R",
+    "Name":"John Cornyn",
+    "Last_name":"Cornyn",
+    "Gender":"M"
+  },
+  {
+    "Region":"Arkansas",
+    "Party":"R",
+    "Name":"Tom Cotton",
+    "Last_name":"Cotton",
+    "Gender":"M"
+  },
+  {
+    "Region":"Idaho",
+    "Party":"R",
+    "Name":"Mike Crapo",
+    "Last_name":"Crapo",
+    "Gender":"M"
+  },
+  {
+    "Region":"Texas",
+    "Party":"R",
+    "Name":"Ted Cruz",
+    "Last_name":"Cruz",
+    "Gender":"M"
+  },
+  {
+    "Region":"Montana",
+    "Party":"R",
+    "Name":"Steve Daines",
+    "Last_name":"Daines",
+    "Gender":"M"
+  },
+  {
+    "Region":"Indiana",
+    "Party":"D",
+    "Name":"Joe Donnelly",
+    "Last_name":"Donnelly",
+    "Gender":"M"
+  },
+  {
+    "Region":"Illinois",
+    "Party":"D",
+    "Name":"Dick Durbin",
+    "Last_name":"Durbin",
+    "Gender":"M"
+  },
+  {
+    "Region":"Wyoming",
+    "Party":"R",
+    "Name":"Mike Enzi",
+    "Last_name":"Enzi",
+    "Gender":"M"
+  },
+  {
+    "Region":"Arizona",
+    "Party":"R",
+    "Name":"Jeff Flake",
+    "Last_name":"Flake",
+    "Gender":"M"
+  },
+  {
+    "Region":"Minnesota",
+    "Party":"D",
+    "Name":"Al Franken",
+    "Last_name":"Franken",
+    "Gender":"M"
+  },
+  {
+    "Region":"Colorado",
+    "Party":"R",
+    "Name":"Cory Gardner",
+    "Last_name":"Gardner",
+    "Gender":"M"
+  },
+  {
+    "Region":"South Carolina",
+    "Party":"R",
+    "Name":"Lindsey Graham",
+    "Last_name":"Graham",
+    "Gender":"M"
+  },
+  {
+    "Region":"Iowa",
+    "Party":"R",
+    "Name":"Chuck Grassley",
+    "Last_name":"Grassley",
+    "Gender":"M"
+  },
+  {
+    "Region":"Utah",
+    "Party":"R",
+    "Name":"Orrin Hatch",
+    "Last_name":"Hatch",
+    "Gender":"M"
+  },
+  {
+    "Region":"New Mexico",
+    "Party":"D",
+    "Name":"Martin Heinrich",
+    "Last_name":"Heinrich",
+    "Gender":"M"
+  },
+  {
+    "Region":"Nevada",
+    "Party":"R",
+    "Name":"Dean Heller",
+    "Last_name":"Heller",
+    "Gender":"M"
+  },
+  {
+    "Region":"North Dakota",
+    "Party":"R",
+    "Name":"John Hoeven",
+    "Last_name":"Hoeven",
+    "Gender":"M"
+  },
+  {
+    "Region":"Oklahoma",
+    "Party":"R",
+    "Name":"Jim Inhofe",
+    "Last_name":"Inhofe",
+    "Gender":"M"
+  },
+  {
+    "Region":"Georgia",
+    "Party":"R",
+    "Name":"Johnny Isakson",
+    "Last_name":"Isakson",
+    "Gender":"M"
+  },
+  {
+    "Region":"Wisconsin",
+    "Party":"R",
+    "Name":"Ron Johnson",
+    "Last_name":"Johnson",
+    "Gender":"M"
+  },
+  {
+    "Region":"Virginia",
+    "Party":"D",
+    "Name":"Tim Kaine",
+    "Last_name":"Kaine",
+    "Gender":"M"
+  },
+  {
+    "Region":"Maine",
+    "Party":"I",
+    "Name":"Angus King",
+    "Last_name":"King",
+    "Gender":"M"
+  },
+  {
+    "Region":"Illinois",
+    "Party":"R",
+    "Name":"Mark Kirk",
+    "Last_name":"Kirk",
+    "Gender":"M"
+  },
+  {
+    "Region":"Oklahoma",
+    "Party":"R",
+    "Name":"James Lankford",
+    "Last_name":"Lankford",
+    "Gender":"M"
+  },
+  {
+    "Region":"Vermont",
+    "Party":"D",
+    "Name":"Patrick Leahy",
+    "Last_name":"Leahy",
+    "Gender":"M"
+  },
+  {
+    "Region":"Utah",
+    "Party":"R",
+    "Name":"Mike Lee",
+    "Last_name":"Lee",
+    "Gender":"M"
+  },
+  {
+    "Region":"West Virginia",
+    "Party":"D",
+    "Name":"Joe Manchin",
+    "Last_name":"Manchin",
+    "Gender":"M"
+  },
+  {
+    "Region":"Massachusetts",
+    "Party":"D",
+    "Name":"Ed Markey",
+    "Last_name":"Markey",
+    "Gender":"M"
+  },
+  {
+    "Region":"Arizona",
+    "Party":"R",
+    "Name":"John McCain",
+    "Last_name":"McCain",
+    "Gender":"M"
+  },
+  {
+    "Region":"Kentucky",
+    "Party":"R",
+    "Name":"Mitch McConnell",
+    "Last_name":"McConnell",
+    "Gender":"M"
+  },
+  {
+    "Region":"New Jersey",
+    "Party":"D",
+    "Name":"Bob Menendez",
+    "Last_name":"Menendez",
+    "Gender":"M"
+  },
+  {
+    "Region":"Oregon",
+    "Party":"D",
+    "Name":"Jeff Merkley",
+    "Last_name":"Merkley",
+    "Gender":"M"
+  },
+  {
+    "Region":"Kansas",
+    "Party":"R",
+    "Name":"Jerry Moran",
+    "Last_name":"Moran",
+    "Gender":"M"
+  },
+  {
+    "Region":"Connecticut",
+    "Party":"D",
+    "Name":"Chris Murphy",
+    "Last_name":"Murphy",
+    "Gender":"M"
+  },
+  {
+    "Region":"Florida",
+    "Party":"D",
+    "Name":"Bill Nelson",
+    "Last_name":"Nelson",
+    "Gender":"M"
+  },
+  {
+    "Region":"Kentucky",
+    "Party":"R",
+    "Name":"Rand Paul",
+    "Last_name":"Paul",
+    "Gender":"M"
+  },
+  {
+    "Region":"Georgia",
+    "Party":"R",
+    "Name":"David Perdue",
+    "Last_name":"Perdue",
+    "Gender":"M"
+  },
+  {
+    "Region":"Michigan",
+    "Party":"D",
+    "Name":"Gary Peters",
+    "Last_name":"Peters",
+    "Gender":"M"
+  },
+  {
+    "Region":"Ohio",
+    "Party":"R",
+    "Name":"Rob Portman",
+    "Last_name":"Portman",
+    "Gender":"M"
+  },
+  {
+    "Region":"Rhode Island",
+    "Party":"D",
+    "Name":"Jack Reed",
+    "Last_name":"Reed",
+    "Gender":"M"
+  },
+  {
+    "Region":"Nevada",
+    "Party":"D",
+    "Name":"Harry Reid",
+    "Last_name":"Reid",
+    "Gender":"M"
+  },
+  {
+    "Region":"Idaho",
+    "Party":"R",
+    "Name":"Jim Risch",
+    "Last_name":"Risch",
+    "Gender":"M"
+  },
+  {
+    "Region":"Kansas",
+    "Party":"R",
+    "Name":"Pat Roberts",
+    "Last_name":"Roberts",
+    "Gender":"M"
+  },
+  {
+    "Region":"South Dakota",
+    "Party":"R",
+    "Name":"Mike Rounds",
+    "Last_name":"Rounds",
+    "Gender":"M"
+  },
+  {
+    "Region":"Florida",
+    "Party":"R",
+    "Name":"Marco Rubio",
+    "Last_name":"Rubio",
+    "Gender":"M"
+  },
+  {
+    "Region":"Vermont",
+    "Party":"I",
+    "Name":"Bernie Sanders",
+    "Last_name":"Sanders",
+    "Gender":"M"
+  },
+  {
+    "Region":"Nebraska",
+    "Party":"R",
+    "Name":"Ben Sasse",
+    "Last_name":"Sasse",
+    "Gender":"M"
+  },
+  {
+    "Region":"Hawaii",
+    "Party":"D",
+    "Name":"Brian Schatz",
+    "Last_name":"Schatz",
+    "Gender":"M"
+  },
+  {
+    "Region":"New York",
+    "Party":"D",
+    "Name":"Chuck Schumer",
+    "Last_name":"Schumer",
+    "Gender":"M"
+  },
+  {
+    "Region":"South Carolina",
+    "Party":"R",
+    "Name":"Tim Scott",
+    "Last_name":"Scott",
+    "Gender":"M"
+  },
+  {
+    "Region":"Alabama",
+    "Party":"R",
+    "Name":"Jeff Sessions",
+    "Last_name":"Sessions",
+    "Gender":"M"
+  },
+  {
+    "Region":"Alabama",
+    "Party":"R",
+    "Name":"Richard Shelby",
+    "Last_name":"Shelby",
+    "Gender":"M"
+  },
+  {
+    "Region":"Alaska",
+    "Party":"R",
+    "Name":"Dan Sullivan",
+    "Last_name":"Sullivan",
+    "Gender":"M"
+  },
+  {
+    "Region":"Montana",
+    "Party":"D",
+    "Name":"Jon Tester",
+    "Last_name":"Tester",
+    "Gender":"M"
+  },
+  {
+    "Region":"South Dakota",
+    "Party":"R",
+    "Name":"John Thune",
+    "Last_name":"Thune",
+    "Gender":"M"
+  },
+  {
+    "Region":"North Carolina",
+    "Party":"R",
+    "Name":"Thom Tillis",
+    "Last_name":"Tillis",
+    "Gender":"M"
+  },
+  {
+    "Region":"Pennsylvania",
+    "Party":"R",
+    "Name":"Pat Toomey",
+    "Last_name":"Toomey",
+    "Gender":"M"
+  },
+  {
+    "Region":"New Mexico",
+    "Party":"D",
+    "Name":"Tom Udall",
+    "Last_name":"Udall",
+    "Gender":"M"
+  },
+  {
+    "Region":"Louisiana",
+    "Party":"R",
+    "Name":"David Vitter",
+    "Last_name":"Vitter",
+    "Gender":"M"
+  },
+  {
+    "Region":"Virginia",
+    "Party":"D",
+    "Name":"Mark Warner",
+    "Last_name":"Warner",
+    "Gender":"M"
+  },
+  {
+    "Region":"Rhode Island",
+    "Party":"D",
+    "Name":"Sheldon Whitehouse",
+    "Last_name":"Whitehouse",
+    "Gender":"M"
+  },
+  {
+    "Region":"Mississippi",
+    "Party":"R",
+    "Name":"Roger Wicker",
+    "Last_name":"Wicker",
+    "Gender":"M"
+  },
+  {
+    "Region":"Oregon",
+    "Party":"D",
+    "Name":"Ron Wyden",
+    "Last_name":"Wyden",
+    "Gender":"M"
+  }
+]
