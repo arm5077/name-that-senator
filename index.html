@@ -12,28 +12,42 @@
 <body>
 
 	<div id = "big_container">
-		<div id = "container">
-			<div id = "header">Name That Senator!</div>
+		<div class = "container">
+			<div id = "top">
+				<div id = "header">Name That Senator!</div>
 
-			<div id = "image">
-				<img src = "">
-				<div id="track_place"></div>
-			</div>
+				<div id = "image">
+					<img src = "">
+					<div id="track_place"></div>
+				</div>
 
-			<div id="guess_block">
-				<div id="guess_header">Who is it?</div>
-				<div class= "guesses"></div>
-				<div class= "next">Next&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></div>
+				<div id="guess_block">
+					<!--<div id="guess_header">Who is it?</div>-->
+					<div class= "guesses"></div>
+					<div class= "next">Next&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></div>
+				</div>
 			</div>
 
 			
-
-			<div id = "score">
+		<div id = "score_block">
+			<div id = "score_line">
 				<div id = "correct">Correct: </div>
 				<div id = "incorrect">Incorrect: </div>
 			</div>
-
 			<div id= "answer"></div>
+		</div>
+
+
+		<div class = "share_block">
+			<div id = "twitter">
+				<a href="https://twitter.com/intent/tweet?text=tk"><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
+			</div>
+			
+			<div class = "end_message"></div>
+			
+		</div>
+
+
 	</div>
 		
 
@@ -45,5 +59,22 @@
 </body>
 
 <script src="scripts.js"></script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
 </html>

@@ -1,9 +1,8 @@
-$("html").keydown(function(key){
-	console.log(key);
-});
-
 var correctGuesses = 0;
 var incorrectGuesses = 0;
+
+var hoveredButton = null;
+var hasGuessed = false;
 
 $.getJSON("names.json", function(names){
 	
@@ -23,6 +22,65 @@ $.getJSON("names.json", function(names){
 
 	var i = 0;
 
+
+	$(window).keydown(function(key){	
+
+		switch(key.keyCode){
+			case 38:
+				key.preventDefault();
+				if (hoveredButton == null){
+					hoveredButton = 3;
+				}else if(hoveredButton == 0){
+					hoveredButton = 3;
+				}else{
+					hoveredButton --;
+				}
+			break;
+			case 40:
+				key.preventDefault();
+				if (hoveredButton == null){
+					hoveredButton = 0;
+				}else if(hoveredButton == 3){
+					hoveredButton = 0;
+				}else{
+					hoveredButton ++;
+				}
+			break;
+			// enter key
+			case 13:
+				if(hasGuessed==false && hoveredButton != null){
+					var guessButton = $(".guess:nth-child(" + (hoveredButton + 1) + ")");
+					var answer_name = '<span class="name">' + names[i].Name + '</span><span class="geo">&nbsp;(' + names[i].Party + '-' + names[i].Region + ')</span>';
+					answer(guessButton.html(), answer_name, guessButton);
+					$(".guess").removeClass("class");
+				}else if(hoveredButton != null){
+					$(".next").removeClass("show");
+					i ++;
+					nextName();
+					hasGuessed = false;
+				}
+			
+
+			break;
+			case 39:
+				key.preventDefault();
+				if(hasGuessed==true){
+					$(".next").removeClass("show");
+					i ++;
+					nextName();
+					hasGuessed = false;
+				}
+			break;
+		}
+
+		
+		if(hoveredButton != null && hasGuessed==false){
+			$(".guess").removeClass("class");
+			$(".guess:nth-child(" + (hoveredButton + 1) + ")").addClass("class");
+		};
+	})
+
+
 	nextName();
 
 	//clicking
@@ -40,99 +98,117 @@ $.getJSON("names.json", function(names){
 		while(threeNames.length < 3){
 			var randNum = Math.round(Math.random() * 99);
 
-			var randName = names[randNum].Name + " <span>(" + names[randNum].Party + "-" + names[randNum].Region + ")</span>";
+			var randName = '<span class="name">' + names[randNum].Name + '</span><span class="geo">&nbsp;(' + names[randNum].Party + '-' + names[randNum].Region + ')</span>';
 
 			if(randName != name && names[randNum].Gender == names[i].Gender && threeNames.indexOf(randName) == -1 ){
 				threeNames.push(randName);
 			}
 		}
 		
-		threeNames.push(name);
 		
-		threeNames.sort(function(a,b){
-			return Math.random() * 2 - 1
-		}); 
-		
+		var randPlacement = Math.round(Math.random() * 3);
+		threeNames.splice(randPlacement, 0, name);
+
 		return threeNames;
 	}
 
-
+	// this constructs a photo and four answers for a senator
 	function nextName(){
 
-	var name = names[i].Name + " <span>(" + names[i].Party + "-" + names[i].Region + ")</span>";
+		hoveredButton = null;
 
-	var options = getOptions(name);
+		var name = '<span class="name">' + names[i].Name + '</span><span class="geo">&nbsp;(' + names[i].Party + '-' + names[i].Region + ')</span>';
 
-	var hasGuessed = false;
+		var options = getOptions(name);
 
-	$("#track_place").html("Senator " + (i+1) + "/100");
+		hasGuessed = false;
 
-	//passing it a blank string to reset values
-	$(".guesses").html("");
-	$("#image img").attr("src","img/" + names[i].Last_name.toLowerCase() + ".jpg")
-	options.forEach(function(guess){
-		
-		//putting each "guess" into a new class that we definie in hard code as .guess. Have to 
-		//use appendTo rather than append because of this-- can't define var otherwise?
-		var guessButton = $("<div class = 'guess'>" + guess + "</div>").appendTo($(".guesses"));
+		$("#track_place").html("Senator " + (i+1) + "/100");
 
-		$(guessButton).click(function(){
+		//passing it a blank string to reset values
+		$(".guesses").html("");
+		$("#image img").attr("src","img/" + names[i].Last_name.toLowerCase() + ".jpg")
+		options.forEach(function(guess){
 			
-			
-			if(hasGuessed == false){
+			//putting each "guess" into a new class that we definie in hard code as .guess. Have to 
+			//use appendTo rather than append because of this-- can't define var otherwise?
+			var guessButton = $("<div class = 'guess'>" + guess + "</div>").appendTo($(".guesses"));
 
-				hasGuessed = true;
-
-				if(name == guess){
-					//$("#answer").html("YEP!");
-					correctGuesses++;
-					$("#correct").html("Correct: <span>" + correctGuesses + "</span>");
-
-					$(guessButton).addClass("green");
-					$("#answer").prepend("<div class='bar bar_green'></div>");
-					$(guessButton).append("<i class='fa fa-check-circle fa-right'></i>");
-				}
-
-
-				else{
-					//$("#answer").html("NOPE");
-					incorrectGuesses ++;
-					$("#incorrect").html("Incorrect: <span>" + incorrectGuesses + "</span>");
-
-					$(guessButton).addClass("red");
-					
-					//$(guessButton).append("<i class='fa fa-times fa-wrong'></i>");
-
-					//adding on score bars
-					$("#answer").append("<div class='bar bar_red'></div>");
-					
-					//turn correct answer green, after selecting wrong answer
-					$(".guess").each(function(i, currentGuess){
-						if($(currentGuess).html() == name){
-							$(currentGuess).addClass("bold");
-							$(currentGuess).append("<i class='fa fa-check-circle fa-right'></i>");
-						}
-					})
-
-
-				}
-
-
-				$(".next").addClass("show");
-			}
-
-		});
-
-	})
+			$(guessButton).click(function(){
+				answer(guess, name, guessButton);
 				
+			});
+
+		})				
 
 	}
 
+
+	function answer(guess, answer, guessButton){
+
+		if(hasGuessed == false){
+			hasGuessed = true;
+
+			if(answer == guess){
+				correctGuesses++;
+				$("#correct").html("Correct: <span>" + correctGuesses + "</span>");
+
+				//*****
+				$(guessButton).addClass("green");
+				$("#answer").prepend("<div class='bar bar_green'></div>");
+				//******
+				$(guessButton).append("<i class='fa fa-check-circle fa-right'></i>");
+			}
+
+
+			else{
+				incorrectGuesses ++;
+				$("#incorrect").html("Incorrect: <span>" + incorrectGuesses + "</span>");
+
+				//******
+				$(guessButton).addClass("red");
+				
+				//adding on score bars
+				$("#answer").append("<div class='bar bar_red'></div>");
+				
+				//turn correct answer green, after selecting wrong answer
+				$(".guess").each(function(i, currentGuess){
+					
+					console.log($(currentGuess).html() + " / " + answer);
+
+					if($(currentGuess).html() == answer){
+						$(currentGuess).addClass("bold");
+						$(currentGuess).append("<i class='fa fa-check-circle fa-right'></i>");
+					}
+				})
+
+
+			}
+
+			$(".next").addClass("show");
+			$("#twitter a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20named%20" + correctGuesses + "%20out%20of%20" + (correctGuesses + incorrectGuesses) + "%20senators.%20" + window.location);
+
+
+
+		}
+
+
+		if (correctGuesses + incorrectGuesses >= 3){
+			$(".share_block").addClass("show");
+		}
+
+		if (correctGuesses + incorrectGuesses == 5){
+			$(".end_message").html("<span>FINAL SCORE:</span> You named <span>" + correctGuesses + " out of 100</span> senators correctly.")
+			$(".next").removeClass("show");
+
+		}
+
+
+	}
 
 
 
 });
-
 
 
 

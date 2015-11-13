@@ -9,36 +9,39 @@ body{
 
 #big_container{
 	width: 750px;
-	height: 460px;
 	margin: 60px auto;
-	padding: 40px 0 0 0;
+	padding: 40px 0 40px 0;
 	-webkit-box-shadow: -1px 3px 16px 3px rgba(89,88,89,0.7);
 	-moz-box-shadow: -1px 3px 16px 3px rgba(89,88,89,0.7);
 	box-shadow: -1px 3px 16px 3px rgba(89,88,89,0.7);
 	border-radius: 10px;
 }
 
-#container{
+.container{
 	margin: 0 auto 0 auto;
 	width: 650px;
-	position: relative;
-	height: 400px;
+}
+
+#top{
+	display: inline-block;
+	width: 100%;
 }
 
 #header{
 	font-size: 40pt;
 	font-weight: 900;
 	margin: 0 0 10px 0;
+	display: inline-block;
 }
 
 #image{
 	display: inline-block;
 	margin: 0 13pt 0 0;
-	width: 200px;
+	width: 207px;
 }
 
 #image img{
-	max-width: 200px;
+	width: 207px;
 	display: inline-block;
 }
 
@@ -53,14 +56,14 @@ body{
 	width: 400px;
 }
 
-#guess_header{
+/*#guess_header{
 	font-weight: 700;
 	width: 100%;
 	background-color: #404040;
 	color: #fff;
 	padding: 7px 14px 7px 14px;
 	margin: 0 0 3px 0;
-}
+}*/
 
 .guesses{
 	display: inline-block;
@@ -78,7 +81,7 @@ body{
 	height: 25px;
 }
 
-.guess span{
+.guess span.geo{
 	display: none;
 }
 
@@ -117,29 +120,43 @@ body{
 	color: #fff;
 }
 
-.next{
+/*.next{
 	display: none;
 	cursor: pointer;
 	padding: 7px 14px 7px 14px;
 	background-color: #e8e8e8;
 	width: 100%;
 	margin: 10px 0 0 0;
-}
+}*/
 
-.show{
-	display: inline-block;
-}
-
-#score{
+.next{
+	display: none;
 	width: 100%;
-	position: absolute;
-	bottom: 20px;
-	right: 0;
+	background-color: #505050;
+	color: #fff;
+	padding: 7px 14px 7px 14px;
+	margin: 0 0 3px 0;
+	cursor: pointer;
+	height: 25px;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 13pt;
+	line-height: 25px;
+}
+
+#score_block{
+	width: 100%;
+	display: inline-block;
+	margin: 20px 0 0 0;
+}
+
+#score_line{
+	width: 100%;
 	height: 25px;
 	text-transform: uppercase;
 }
 
-#score span{
+#score_line span{
 	font-weight: 700;
 }
 
@@ -156,9 +173,6 @@ body{
 	width: 100%;
 	height: 20px;
 	background-color: #e8e8e8;
-	position: absolute;
-	bottom: 0;
-	right: 0;
 }
 
 .bar{
@@ -177,3 +191,56 @@ body{
 	float: right;
 }
 
+.share_block{
+	width: 100%;
+	display: none;
+	margin: 10px 0 0 0;
+}
+
+.fa{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+
+#twitter{
+	display: inline-block;
+	font-size: 18pt;
+	background-color: #404040;
+	color: #fff;
+	border-radius: 5px;
+	padding: 0 9px 3px 8px;
+	vertical-align: middle;
+}
+
+#twitter a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#twitter span{
+	font-size: 11pt;
+	letter-spacing: .03em;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 300;
+}
+
+.end_message{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13pt;
+	margin: 0 0 0 10px;
+}
+
+.end_message span{
+	font-weight: 900;
+}
+
+.show{
+	display: inline-block;
+}
+
+.class{
+	background-color: black;
+}
