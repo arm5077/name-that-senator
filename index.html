@@ -9,52 +9,73 @@
 	
 </head>
 
-<body>
+<body>	
+	<div class = "window">
+	
+		<div class = "overlayLight">
+			<div class = "instrux_box">
+				<div class="instrux_text">
+				Use the <span>arrow keys</span> and <span>enter button</span> to navigate.</div>
+				<div class = "button">Got it.</div>
+			</div>
+		</div>
+
+		<div class = "overlayDark"></div>
 
 	<div id = "big_container">
 		<div class = "container">
+			
 			<div id = "top">
 				<div id = "header">Name That Senator!</div>
-
+				
 				<div id = "image">
 					<img src = "">
 					<div id="track_place"></div>
 				</div>
-
+				
 				<div id="guess_block">
 					<!--<div id="guess_header">Who is it?</div>-->
 					<div class= "guesses"></div>
-					<div class= "next">Next&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></div>
+					<div class= "next">
+						<div class = "next_wrapper">
+							<span>Next&nbsp;&nbsp;</span><i class="fa fa-arrow-right"></i>
+						</div>
+					</div>
+				</div>
+			</div><!--top-->
+
+			
+			<div id = "score_block">
+				<div id = "score_line">
+					<div id = "correct">Correct: </div>
+					<div id = "incorrect">Incorrect: </div>
+				</div>
+				<div id= "answer"></div>
+			</div>
+
+
+			<div class = "share_block">
+				<div class = "twitter">
+					<a href="https://twitter.com/intent/tweet?text=tk"><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
 				</div>
 			</div>
 
-			
-		<div id = "score_block">
-			<div id = "score_line">
-				<div id = "correct">Correct: </div>
-				<div id = "incorrect">Incorrect: </div>
+		</div><!--container-->
+
+		<div class = "end_container">
+			<div class = "end_wrapper">
+				<div class = "end_message">WOW, you made it!</div>
+				<div class = "score"></div>
+				<div class = "twitter">
+					<a href="https://twitter.com/intent/tweet?text=tk"><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
+				</div>
+				<a href="/"><div class= "replay"><i class="fa fa-refresh"></i>Replay</div></a>
 			</div>
-			<div id= "answer"></div>
 		</div>
 
+	</div><!--big container-->
 
-		<div class = "share_block">
-			<div id = "twitter">
-				<a href="https://twitter.com/intent/tweet?text=tk"><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
-			</div>
-			
-			<div class = "end_message"></div>
-			
-		</div>
-
-
-	</div>
-		
-
-		
-
-	</div><!--container-->
-
+</div><!--window-->
 
 </body>
 

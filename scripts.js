@@ -4,6 +4,15 @@ var incorrectGuesses = 0;
 var hoveredButton = null;
 var hasGuessed = false;
 
+var instruxShowing = true; 
+
+//selecting initial button that verifies user read instrux
+$(".button").click(function(){
+	$(".overlayLight").addClass("hide");
+	$(".overlayDark").addClass("hide");
+	instruxShowing = false;
+})
+
 $.getJSON("names.json", function(names){
 	
 	// This sorts names alphabetically
@@ -26,33 +35,44 @@ $.getJSON("names.json", function(names){
 	$(window).keydown(function(key){	
 
 		switch(key.keyCode){
+			//up
 			case 38:
 				key.preventDefault();
-				if (hoveredButton == null){
-					hoveredButton = 3;
-				}else if(hoveredButton == 0){
-					hoveredButton = 3;
-				}else{
-					hoveredButton --;
+				if(instruxShowing == false){
+					if (hoveredButton == null){
+						hoveredButton = 3;
+					}else if(hoveredButton == 0){
+						hoveredButton = 3;
+					}else{
+						hoveredButton --;
+					}
 				}
 			break;
+			//down
 			case 40:
 				key.preventDefault();
-				if (hoveredButton == null){
-					hoveredButton = 0;
-				}else if(hoveredButton == 3){
-					hoveredButton = 0;
-				}else{
-					hoveredButton ++;
-				}
+				if(instruxShowing == false){
+					if (hoveredButton == null){
+						hoveredButton = 0;
+					}else if(hoveredButton == 3){
+						hoveredButton = 0;
+					}else{
+						hoveredButton ++;
+					}
+				}	
 			break;
 			// enter key
 			case 13:
-				if(hasGuessed==false && hoveredButton != null){
+				key.preventDefault();
+				if(instruxShowing == true){
+					$(".overlayLight").addClass("hide");
+					$(".overlayDark").addClass("hide");
+					instruxShowing = false;
+				}else if(hasGuessed==false && hoveredButton != null){
 					var guessButton = $(".guess:nth-child(" + (hoveredButton + 1) + ")");
 					var answer_name = '<span class="name">' + names[i].Name + '</span><span class="geo">&nbsp;(' + names[i].Party + '-' + names[i].Region + ')</span>';
 					answer(guessButton.html(), answer_name, guessButton);
-					$(".guess").removeClass("class");
+					$(".guess").removeClass("hover_color");
 				}else if(hoveredButton != null){
 					$(".next").removeClass("show");
 					i ++;
@@ -75,8 +95,8 @@ $.getJSON("names.json", function(names){
 
 		
 		if(hoveredButton != null && hasGuessed==false){
-			$(".guess").removeClass("class");
-			$(".guess:nth-child(" + (hoveredButton + 1) + ")").addClass("class");
+			$(".guess").removeClass("hover_color");
+			$(".guess:nth-child(" + (hoveredButton + 1) + ")").addClass("hover_color");
 		};
 	})
 
@@ -192,15 +212,21 @@ $.getJSON("names.json", function(names){
 
 		}
 
+		var totalGuesses = (correctGuesses + incorrectGuesses); 
 
-		if (correctGuesses + incorrectGuesses >= 3){
-			$(".share_block").addClass("show");
+
+		if (totalGuesses >= 2){
+			$(".twitter").addClass("show");
 		}
 
-		if (correctGuesses + incorrectGuesses == 5){
-			$(".end_message").html("<span>FINAL SCORE:</span> You named <span>" + correctGuesses + " out of 100</span> senators correctly.")
-			$(".next").removeClass("show");
+		if (totalGuesses == 4){
+			$(".instrux").addClass("hide");
+		}
 
+		if (totalGuesses == 4){
+			$(".container").addClass("hide");
+			$(".end_container").addClass("show_inherit");
+			$(".score").html("And you correctly identified <span>" + correctGuesses + " out of 100</span> senators.");
 		}
 
 
@@ -217,6 +243,15 @@ $.getJSON("names.json", function(names){
 
 
 /*
+
+if (totalGuesses == 100){
+			$(".end_message").html("<div class='end_message_text'><span>FINAL SCORE:</span> You named <span>" + correctGuesses + " out of 100</span> senators correctly.</div>")
+			$(".end_message").addClass("show");
+			$(".next").removeClass("show");
+			$(".replay").addClass("show");
+		}
+
+
 var numbers = [34, 21, 53, 25];
 numbers.sort(function(a,b){
 	return b-a;

@@ -7,6 +7,74 @@ body{
 	font-weight: 400;
 }
 
+a{
+	text-decoration: none;
+}
+
+.window{
+	display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 90vh;
+}
+
+.overlayDark{
+	position: fixed;
+	z-index: 99999;
+	background-color: rgba(0,0,0,.7);
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 10px black;
+	padding: 0 800px 0 0;
+	top: 0;
+	margin: 0 0 0 -100px;
+}
+
+.overlayLight{
+	position: fixed;
+	z-index: 9999999;
+	background-color: #f7d857;
+	width: 60%;
+	height: 65px;
+	box-shadow: 0 0 10px black;
+	padding: 0;
+	top: 0;
+	right: 20%;
+	margin: -10px auto 0 auto;
+	border-radius: 5px;
+}
+
+.instrux_box{
+	margin: 17px auto 0 auto;
+	text-align: center;
+	width: 768px;
+	font-size: 14pt;
+	}
+
+.instrux_text{
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.instrux_text span{
+	font-weight: 900;
+	text-decoration: underline;
+}
+
+.button{
+	background-color: #404040;
+	color: #fff;
+	border-radius: 5px;
+	padding: 8px;
+	width: 80px;
+	font-weight: 300;
+	text-align: center;
+	display: inline-block;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
 #big_container{
 	width: 750px;
 	margin: 60px auto;
@@ -15,6 +83,7 @@ body{
 	-moz-box-shadow: -1px 3px 16px 3px rgba(89,88,89,0.7);
 	box-shadow: -1px 3px 16px 3px rgba(89,88,89,0.7);
 	border-radius: 10px;
+	vertical-align: middle;
 }
 
 .container{
@@ -22,6 +91,90 @@ body{
 	width: 650px;
 }
 
+/*////////// end message popup ///////////*/
+
+.end_container{
+	margin: 0 auto 0 auto;
+	width: 650px;
+	height: 200px;
+	padding: 100px 0;
+	display: none;
+	background-color: #f7d857;	
+	font-size: 15pt;
+}
+
+.end_container span{
+	font-weight: 900;
+}
+
+.end_wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.end_message{
+	width: auto;
+	display: inline-block;
+	font-weight: 900;
+	font-size: 25pt;
+	margin-bottom: 6px;
+}
+
+.score{
+	border-bottom: 1px solid #404040;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.twitter{
+	font-size: 18pt;
+	background-color: #404040;
+	color: #fff;
+	border-radius: 5px;
+	padding: 0 9px 0 8px;
+	vertical-align: middle;
+	height: 33px;
+}
+
+.twitter a{
+	text-decoration: underline;
+	color: #fff;
+	display: inline-block;
+}
+
+.twitter span{
+	font-size: 11pt;
+	letter-spacing: .03em;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 300;
+}
+
+.replay{
+	background-color: #404040;
+	color: #fff;
+	padding: 0 9px 0 8px;
+	margin: 0 0 0 5px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14pt;
+	font-weight: 300;
+	width: auto;
+	border-radius: 5px;
+	vertical-align: middle;
+	height: 33px;
+}
+
+a.replay{
+	color: #fff;
+}
+
+.fa-refresh{
+	position: relative;
+	bottom: 2px;
+}
+
+/*////////////////top/////////////////*/
 #top{
 	display: inline-block;
 	width: 100%;
@@ -32,6 +185,8 @@ body{
 	font-weight: 900;
 	margin: 0 0 10px 0;
 	display: inline-block;
+	line-height: 30pt;
+	margin: 0 0 20px 0;
 }
 
 #image{
@@ -53,17 +208,8 @@ body{
 	display: inline-block;
 	vertical-align: top;
 	font-size: 15pt;
-	width: 400px;
+	width: 421px;
 }
-
-/*#guess_header{
-	font-weight: 700;
-	width: 100%;
-	background-color: #404040;
-	color: #fff;
-	padding: 7px 14px 7px 14px;
-	margin: 0 0 3px 0;
-}*/
 
 .guesses{
 	display: inline-block;
@@ -76,9 +222,13 @@ body{
 	background-color: #e8e8e8;
 	width: 100%;
 	display: inline-block;
-	padding: 7px 14px 7px 14px;
+	padding: 7px 0 7px 0;
 	cursor: pointer;
 	height: 25px;
+}
+
+.guess span:first-child{
+	margin-left: 10px;
 }
 
 .guess span.geo{
@@ -89,59 +239,58 @@ body{
 	display: inline-block;
 }
 
-.guess .fa-wrong{
-	color: rgba(234,70,61,.9);
-	font-size: 19pt;
-	float: right;
-	margin-right: 5px;
-}
-
+/*green check thing*/
 .guess .fa-right{
-	color: #669878;
+	color: #679663;
 	font-size: 19pt;
 	float: right;
-	margin-right: 5px;
+	margin-right: 10px;
 }
-
-/*.guess:hover{
-	background-color: #dbdbdb;
-}*/
 
 .bold{
 	font-weight: 700;
 }
 
 .red{
-	background-color: rgba(234,70,61,.9);
+	background-color: rgba(234,70,61,.8);
 }
 
 .green{
-	background-color: #669878;
+	background-color: #679663;
 	color: #fff;
 }
-
-/*.next{
-	display: none;
-	cursor: pointer;
-	padding: 7px 14px 7px 14px;
-	background-color: #e8e8e8;
-	width: 100%;
-	margin: 10px 0 0 0;
-}*/
 
 .next{
 	display: none;
 	width: 100%;
-	background-color: #505050;
+	background-color: #999;
 	color: #fff;
-	padding: 7px 14px 7px 14px;
-	margin: 0 0 3px 0;
 	cursor: pointer;
-	height: 25px;
+	height: 39px;
 	text-align: right;
+	line-height: 39px;
+}
+
+.next_wrapper{
+	display: inline-block;
+	margin: 0 3px 0px 0;
+}
+
+/*"NEXT" text*/
+.next_wrapper span{
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-size: 15pt;
 	text-transform: uppercase;
-	font-size: 13pt;
-	line-height: 25px;
+	font-weight: 300;
+}
+/*arrow next*/
+.fa-arrow-right{
+	font-size: 15pt;
+	display: inline-block;
+	position: relative;
+	bottom: 1.5px;
 }
 
 #score_block{
@@ -168,6 +317,8 @@ body{
 	float: right;
 }
 
+/*////////////bottom///////////////*/
+
 #answer{
 	display: inline-block;
 	width: 100%;
@@ -183,17 +334,17 @@ body{
 }
 
 .bar_green{
-	background-color: #669878;
+	background-color: #679663;
 }
 
 .bar_red{
-	background-color: rgba(234,70,61,.9);
+	background-color: rgba(234,70,61,.8);
 	float: right;
 }
 
 .share_block{
 	width: 100%;
-	display: none;
+	display: inline-block;
 	margin: 10px 0 0 0;
 }
 
@@ -203,22 +354,24 @@ body{
 	margin: 0 5px 0 0;
 }
 
-#twitter{
+/*.twitter{
 	display: inline-block;
 	font-size: 18pt;
 	background-color: #404040;
 	color: #fff;
 	border-radius: 5px;
-	padding: 0 9px 3px 8px;
+	padding: 0 9px 0 8px;
 	vertical-align: middle;
+	height: 33px;
 }
 
-#twitter a{
-	text-decoration: none;
+.twitter a{
+	text-decoration: underline;
 	color: #fff;
+	display: inline-block;
 }
 
-#twitter span{
+.twitter span{
 	font-size: 11pt;
 	letter-spacing: .03em;
 	display: inline-block;
@@ -226,21 +379,42 @@ body{
 	font-weight: 300;
 }
 
-.end_message{
+.replay{
+	background-color: #404040;
+	color: #fff;
+	padding: 7px 5px 5px 9px;
+	margin: 0 0 0 5px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14pt;
+	font-weight: 300;
+	width: auto;
 	display: inline-block;
-	vertical-align: middle;
-	font-size: 13pt;
-	margin: 0 0 0 10px;
 }
 
-.end_message span{
-	font-weight: 900;
+a.replay{
+	color: #fff;
 }
+
+.fa-refresh{
+	position: relative;
+	bottom: 2px;
+}
+
+*/
 
 .show{
 	display: inline-block;
 }
 
-.class{
-	background-color: black;
+.show_inherit{
+	display: inherit;
+}
+
+.hide{
+	display: none;
+}
+
+.hover_color{
+	background-color: #ccc;
 }
