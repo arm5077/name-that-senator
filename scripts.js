@@ -6,9 +6,26 @@ var hasGuessed = false;
 
 var instruxShowing = true; 
 
+//cookies
+ $(document).ready(function() {
+        // check cookie
+        var visited = $.cookie("visited")
+
+        if (visited != null) {
+            $(".overlayLight").addClass("hide");
+      		$(".overlayDark").addClass("hide");
+      		instruxShowing = false;
+        }
+
+        // set cookie
+        $.cookie("visited", { expires: 30});
+    });
+
+
 //selecting initial button that verifies user read instrux
 $(".button").click(function(){
-	$(".overlayLight").addClass("hide");
+	/*$(".overlayLight").addClass("hide");*/
+	$(".overlayLight").fadeOut(350);
 	$(".overlayDark").addClass("hide");
 	instruxShowing = false;
 })
@@ -65,7 +82,8 @@ $.getJSON("names.json", function(names){
 			case 13:
 				key.preventDefault();
 				if(instruxShowing == true){
-					$(".overlayLight").addClass("hide");
+					/*$(".overlayLight").addClass("hide");*/
+					$(".overlayLight").fadeOut(350);
 					$(".overlayDark").addClass("hide");
 					instruxShowing = false;
 				}else if(hasGuessed==false && hoveredButton != null){
@@ -206,8 +224,8 @@ $.getJSON("names.json", function(names){
 			}
 
 			$(".next").addClass("show");
-			$("#twitter a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20named%20" + correctGuesses + "%20out%20of%20" + (correctGuesses + incorrectGuesses) + "%20senators.%20" + window.location);
-
+			$(".twitter1 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20named%20" + correctGuesses + "%20out%20of%20" + (correctGuesses + incorrectGuesses) + "%20senators.%20" + window.location);
+			$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20named%20" + correctGuesses + "%20out%20of%20" + (correctGuesses + incorrectGuesses) + "%20senators.%20" + window.location);
 
 
 		}
@@ -215,18 +233,20 @@ $.getJSON("names.json", function(names){
 		var totalGuesses = (correctGuesses + incorrectGuesses); 
 
 
-		if (totalGuesses >= 2){
-			$(".twitter").addClass("show");
+		if (totalGuesses >= 10){
+			$(".twitter1").addClass("show");
 		}
 
-		if (totalGuesses == 4){
+		if (totalGuesses == 100){
 			$(".instrux").addClass("hide");
 		}
 
-		if (totalGuesses == 4){
-			$(".container").addClass("hide");
-			$(".end_container").addClass("show_inherit");
-			$(".score").html("And you correctly identified <span>" + correctGuesses + " out of 100</span> senators.");
+		if (totalGuesses == 100){
+			$(".container").delay(250).fadeOut(750);
+			//$(".end_container").delay(800).addClass("show_inherit");
+			//$(".container").delay(1000).queue(function(){$(".container").addClass('hide')});
+			$(".end_container").delay(1000).queue(function(){$(".end_container").addClass('show_inherit')});
+			$(".score").html("You correctly identified <span>" + correctGuesses + " out of 100</span> senators.");
 		}
 
 

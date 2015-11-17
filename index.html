@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="jquery.cookie.js"></script>
 	<link href="styles.css" rel="stylesheet">
 	
 </head>
@@ -26,7 +27,7 @@
 		<div class = "container">
 			
 			<div id = "top">
-				<div id = "header">Name That Senator!</div>
+				<div id = "header">Name that Senator!</div>
 				
 				<div id = "image">
 					<img src = "">
@@ -55,22 +56,33 @@
 
 
 			<div class = "share_block">
-				<div class = "twitter">
-					<a href="https://twitter.com/intent/tweet?text=tk"><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
+
+				<div class = "end_button twitter1">
+					<a href="https://twitter.com/intent/tweet?text="><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
 				</div>
+
+				<div class = "logo">
+					<img src = "NJ_logo.png">	
+				</div>
+
 			</div>
 
 		</div><!--container-->
 
 		<div class = "end_container">
 			<div class = "end_wrapper">
-				<div class = "end_message">WOW, you made it!</div>
+				<div class = "end_message">CONGRATS, you made it!</div>
 				<div class = "score"></div>
-				<div class = "twitter">
-					<a href="https://twitter.com/intent/tweet?text=tk"><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
+				
+				<div class = "end_button twitter2">
+					<a href="https://twitter.com/intent/tweet?text="><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
 				</div>
-				<a href="/"><div class= "replay"><i class="fa fa-refresh"></i>Replay</div></a>
-			</div>
+				
+
+				<div class = "end_button replay">
+					<a href="/"><i class="fa fa-refresh"></i><span>Play again</span></a>
+				</div>
+
 		</div>
 
 	</div><!--big container-->

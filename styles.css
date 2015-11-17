@@ -99,8 +99,20 @@ a{
 	height: 200px;
 	padding: 100px 0;
 	display: none;
-	background-color: #f7d857;	
+	/*background-color: #f7d857;*/	
 	font-size: 15pt;
+
+	background: rgba(245,229,166,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(245,229,166,1)), color-stop(87%, rgba(247,217,96,1)), color-stop(100%, rgba(247,215,86,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e5a6', endColorstr='#f7d756', GradientType=1 );
+
+
+
 }
 
 .end_container span{
@@ -126,7 +138,7 @@ a{
 	margin-bottom: 20px;
 }
 
-.twitter{
+.end_button{
 	font-size: 18pt;
 	background-color: #404040;
 	color: #fff;
@@ -134,15 +146,17 @@ a{
 	padding: 0 9px 0 8px;
 	vertical-align: middle;
 	height: 33px;
+	display: inline-block;
+	margin: 0 200px 10px 0;
 }
 
-.twitter a{
+.end_button a{
 	text-decoration: underline;
 	color: #fff;
 	display: inline-block;
 }
 
-.twitter span{
+.end_button span{
 	font-size: 11pt;
 	letter-spacing: .03em;
 	display: inline-block;
@@ -150,7 +164,7 @@ a{
 	font-weight: 300;
 }
 
-.replay{
+/*.replay{
 	background-color: #404040;
 	color: #fff;
 	padding: 0 9px 0 8px;
@@ -172,7 +186,7 @@ a.replay{
 .fa-refresh{
 	position: relative;
 	bottom: 2px;
-}
+}*/
 
 /*////////////////top/////////////////*/
 #top{
@@ -278,12 +292,9 @@ a.replay{
 
 /*"NEXT" text*/
 .next_wrapper span{
-	position: relative;
-	top: 1px;
 	display: inline-block;
 	font-size: 15pt;
-	text-transform: uppercase;
-	font-weight: 300;
+	font-weight: 400;
 }
 /*arrow next*/
 .fa-arrow-right{
@@ -346,6 +357,11 @@ a.replay{
 	width: 100%;
 	display: inline-block;
 	margin: 10px 0 0 0;
+	height: 36px;
+}
+
+.twitter1{
+	display: none;
 }
 
 .fa{
@@ -354,54 +370,16 @@ a.replay{
 	margin: 0 5px 0 0;
 }
 
-/*.twitter{
+.logo{
 	display: inline-block;
-	font-size: 18pt;
-	background-color: #404040;
-	color: #fff;
-	border-radius: 5px;
-	padding: 0 9px 0 8px;
-	vertical-align: middle;
-	height: 33px;
+	float: right;
 }
 
-.twitter a{
-	text-decoration: underline;
-	color: #fff;
-	display: inline-block;
-}
-
-.twitter span{
-	font-size: 11pt;
-	letter-spacing: .03em;
-	display: inline-block;
-	vertical-align: middle;
-	font-weight: 300;
-}
-
-.replay{
-	background-color: #404040;
-	color: #fff;
-	padding: 7px 5px 5px 9px;
-	margin: 0 0 0 5px;
-	cursor: pointer;
-	text-transform: uppercase;
-	font-size: 14pt;
-	font-weight: 300;
-	width: auto;
-	display: inline-block;
-}
-
-a.replay{
-	color: #fff;
-}
-
-.fa-refresh{
+.logo img{
+	width: 170px;
 	position: relative;
-	bottom: 2px;
+	top: 6px;
 }
-
-*/
 
 .show{
 	display: inline-block;
