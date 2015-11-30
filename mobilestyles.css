@@ -66,6 +66,7 @@ html, body{
 
 .track_place{
 	display: none;
+	color: #404040;
 }
 
 .mobile_track_wrapper{

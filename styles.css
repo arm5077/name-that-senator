@@ -179,7 +179,8 @@ a{
 .image_block{
 	display: inline-block;
 	margin: 0 13pt 0 0;
-	width: 207px;
+	height: 207px;
+	position: relative;
 }
 
 img.photo_desktop{
@@ -187,8 +188,17 @@ img.photo_desktop{
 	display: inline-block;
 }
 
-#track_place{
+.track_place{
 	display: inline-block;
+	color: #eee;
+	float: right;
+	background-color: rgba(65,65,65,.7);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 999999;
+	padding: 2px 6px 2px 6px;
+	font-weight: 300;
 }
 
 .mobile_track_wrapper.{

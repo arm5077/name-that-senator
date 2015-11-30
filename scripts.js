@@ -163,8 +163,10 @@ $.getJSON("names.json", function(names){
 
 		hasGuessed = false;
 
-		$(".track_place").html("Senator " + (i+1) + "/100");
+		$(".track_place").html((i+1) + " / 100");
 		$(".track_mobile").html((i+1) + "/100");
+		//$(".track_place").html("Senator " + (i+1) + "/100");
+
 
 		//passing it a blank string to reset values
 		$(".guesses").html("");
