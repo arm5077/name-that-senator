@@ -7,13 +7,13 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="jquery.cookie.js"></script>
 	<link href="styles.css" rel="stylesheet">
-	<link href="mobilestyles.css" rel="stylesheet">
+	<!--<link href="mobilestyles.css" rel="stylesheet">-->
 	
 </head>
 
 <body>	
-	<div class = "window desktop">
-		
+	<div class = "window">
+	
 		<div class = "overlayLight">
 			<div class = "instrux_box">
 				<div class="instrux_text">
@@ -24,13 +24,14 @@
 
 		<div class = "overlayDark"></div>
 
-	<div class = "big_container">
+	<div id = "big_container">
 		<div class = "container">
+			
 			<div id = "top">
 				<div class = "header">Name that Senator!</div>
 				
 				<div class = "image_block">
-					<img class = "photo_desktop" src = "">
+					<img src = "">
 					<div id="track_place"></div>
 				</div>
 				
@@ -44,13 +45,15 @@
 				</div>
 			</div><!--top-->
 
+			
 			<div id = "score_block">
 				<div id = "score_line">
 					<div id = "correct">Correct: </div>
 					<div id = "incorrect">Incorrect: </div>
 				</div>
-				<div class= "answer"></div>
+				<div id= "answer"></div>
 			</div>
+
 
 			<div class = "footer">
 				<div class = "end_button twitter1">
@@ -73,92 +76,17 @@
 				<div class = "end_button twitter2">
 					<a href="https://twitter.com/intent/tweet?text="><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
 				</div>
+				
 
 				<div class = "end_button replay">
 					<a href="/"><i class="fa fa-refresh"></i><span>Play again</span></a>
 				</div>
 
-			</div>
 		</div>
-		
-	</div><!--bigcontainer-->
 
+	</div><!--big container-->
 
-	</div><!--window-->
-
-<!--mobile version-->
-		<div class = "big_container mobile">
-		<div class = "container">
-			<div id = "top">
-				<div class = "header">Name that Senator!</div>
-
-				<div class = "image_block">
-					<div class = "photo"><img src = ""></div>
-					<div class="track_place"></div>
-					
-					<div class="mobile_track_wrapper">
-						<div class = "MTW_inner">
-							<div class = "label">Correct:</div>
-							<div id = "correct">&nbsp;</div>
-							<div class = "label">Incorrect:</div>
-							<div id = "incorrect">&nbsp;</div>
-						</div>
-							<div class= "answer"></div>
-							<div class="track_mobile">0/100</div>
-					</div>
-				</div>
-				
-				<div id="guess_block">
-					<div class= "guesses"></div>
-					<div class = "next_placeholder">&nbsp;</div>
-					<div class= "next">
-						<div class = "next_wrapper">
-							<span>Next&nbsp;&nbsp;</span><i class="fa fa-arrow-right"></i>
-						</div>
-					</div>
-				</div>
-			</div><!--top-->
-
-			
-			<div id = "score_block">
-				<div id = "score_line">
-					<div id = "correct">Correct: </div>
-					<div id = "incorrect">Incorrect: </div>
-				</div>
-				<div class= "answer"></div>
-			</div>
-
-			<div class = "footer_mobile">
-
-				<div class = "end_button twitter1">
-					<a href="https://twitter.com/intent/tweet?text="><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
-				</div>
-
-				<div class = "logo">
-					<a href = "http://www.nationaljournal.com/"><img src = "NJlogo_small.png"></a>
-				</div>
-
-			</div>
-
-		</div><!--container-->
-
-			<div class = "end_container_mobile">
-				<div class = "end_wrapper">
-					<div class = "end_message">CONGRATS, <br> you made it!</div>
-					<div class = "score"></div>
-					
-					<div class = "end_button twitter2">
-						<a href="https://twitter.com/intent/tweet?text="><i class="fa fa-twitter"></i><span>Tweet your score!</span></a>
-					</div>
-
-					<div class = "end_button replay">
-						<a href="/"><i class="fa fa-refresh"></i><span>Play again</span></a>
-					</div>
-			</div>
-
-		</div><!--bigcontainer-->
-
-		
+</div><!--window-->
 
 </body>
 

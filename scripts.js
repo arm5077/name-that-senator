@@ -9,7 +9,7 @@ var instruxShowing = true;
 //cookies
  $(document).ready(function() {
         // check cookie
-        var visited = $.cookie("visited")
+        var visited = $.cookie("visited");
 
         if (visited != null) {
             $(".overlayLight").addClass("hide");
@@ -104,6 +104,7 @@ $.getJSON("names.json", function(names){
 				key.preventDefault();
 				if(hasGuessed==true){
 					$(".next").removeClass("show");
+					$(".next_placeholder").removeClass("hide");
 					i ++;
 					nextName();
 					hasGuessed = false;
@@ -121,8 +122,9 @@ $.getJSON("names.json", function(names){
 
 	nextName();
 
-	//clicking
+	//clicking next
 	$(".next").click(function(){
+		$(".next_placeholder").removeClass("hide");
 		$(".next").removeClass("show");
 		i ++;
 		nextName();
@@ -161,11 +163,12 @@ $.getJSON("names.json", function(names){
 
 		hasGuessed = false;
 
-		$("#track_place").html("Senator " + (i+1) + "/100");
+		$(".track_place").html("Senator " + (i+1) + "/100");
+		$(".track_mobile").html((i+1) + "/100");
 
 		//passing it a blank string to reset values
 		$(".guesses").html("");
-		$("#image img").attr("src","img/" + names[i].Last_name.toLowerCase() + ".jpg")
+		$(".image_block img").attr("src","img/" + names[i].Last_name.toLowerCase() + ".jpg")
 		options.forEach(function(guess){
 			
 			//putting each "guess" into a new class that we definie in hard code as .guess. Have to 
@@ -189,31 +192,34 @@ $.getJSON("names.json", function(names){
 
 			if(answer == guess){
 				correctGuesses++;
-				$("#correct").html("Correct: <span>" + correctGuesses + "</span>");
+				//add correct score desktop
+				$("#score_block #correct").html("Correct: <span>" + correctGuesses + "</span>");
+				//add correct score mobile
+				$(".MTW_inner #correct").html("<span>" + correctGuesses + "</span>");
 
-				//*****
+				//adding on score bars correct
 				$(guessButton).addClass("green");
-				$("#answer").prepend("<div class='bar bar_green'></div>");
-				//******
+				$(".answer").prepend("<div class='bar bar_green'></div>");
 				$(guessButton).append("<i class='fa fa-check-circle fa-right'></i>");
 			}
 
 
 			else{
 				incorrectGuesses ++;
-				$("#incorrect").html("Incorrect: <span>" + incorrectGuesses + "</span>");
+				//add incorrect score desktop
+				$("#score_block #incorrect").html("Incorrect: <span>" + incorrectGuesses + "</span>");
+				//add incorrect score mobile
+				$(".MTW_inner #incorrect").html("<span>" + incorrectGuesses + "</span>");
 
 				//******
 				$(guessButton).addClass("red");
 				
-				//adding on score bars
-				$("#answer").append("<div class='bar bar_red'></div>");
+				//adding on score bars incorrect
+				$(".answer").append("<div class='bar bar_red'></div>");
 				
 				//turn correct answer green, after selecting wrong answer
 				$(".guess").each(function(i, currentGuess){
 					
-					console.log($(currentGuess).html() + " / " + answer);
-
 					if($(currentGuess).html() == answer){
 						$(currentGuess).addClass("bold");
 						$(currentGuess).append("<i class='fa fa-check-circle fa-right'></i>");
@@ -222,19 +228,18 @@ $.getJSON("names.json", function(names){
 
 
 			}
-
 			$(".next").addClass("show");
-			$(".twitter1 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20named%20" + correctGuesses + "%20out%20of%20" + (correctGuesses + incorrectGuesses) + "%20senators.%20" + window.location);
-			$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20named%20" + correctGuesses + "%20out%20of%20" + (correctGuesses + incorrectGuesses) + "%20senators.%20" + window.location);
-
-
-		}
+			$(".next_placeholder").addClass("hide");
+			$(".twitter1 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
+			$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
+			}
 
 		var totalGuesses = (correctGuesses + incorrectGuesses); 
 
 
-		if (totalGuesses >= 10){
-			$(".twitter1").addClass("show");
+		if (totalGuesses >= 12){
+			/*$(".twitter1").addClass("show");*/
+			$(".twitter1").css("display","inline-block");
 		}
 
 		if (totalGuesses == 100){
@@ -243,9 +248,8 @@ $.getJSON("names.json", function(names){
 
 		if (totalGuesses == 100){
 			$(".container").delay(250).fadeOut(750);
-			//$(".end_container").delay(800).addClass("show_inherit");
-			//$(".container").delay(1000).queue(function(){$(".container").addClass('hide')});
 			$(".end_container").delay(1000).queue(function(){$(".end_container").addClass('show_inherit')});
+			$(".end_container_mobile").delay(1000).queue(function(){$(".end_container_mobile").addClass('show')});
 			$(".score").html("You correctly identified <span>" + correctGuesses + " out of 100</span> senators.");
 		}
 

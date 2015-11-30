@@ -1,0 +1,260 @@
+
+@media screen and (max-width: 750px) {
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.overlayDark{
+	display: none;
+}
+
+.overlayLight{
+	display: none;
+}
+
+.big_container{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	vertical-align: middle;
+	border-radius: 0;
+	-webkit-fobox-shadow: 0 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 0 #fff;
+	box-shadow: 0 0 0 0 #fff;
+	display: block;
+}
+
+.container{
+	min-height: 96%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 2% -39px 2%;
+	width: 98%;
+	display: inline-block;
+}
+
+/*////////////////photo and track place/////////////////*/
+#top{
+	display: inline-block;
+	width: 100%;
+}
+
+.header{
+	font-size: 25pt;
+	display: inline-block;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+
+.image_block{
+	width: 100%;
+	display: inline-block;
+}
+
+.photo{
+	display: inline-block;
+	width: 55%;
+}
+
+.photo img{
+	width: 100%;
+}
+
+.track_place{
+	display: none;
+}
+
+.mobile_track_wrapper{
+	display: inline-block;
+	vertical-align: top;
+	width: 42%;
+	text-align: center;
+	margin: 7vw 0 0 1vw;
+}
+
+.MTW_inner{
+	display: inline-block;
+	margin: 0 auto 0 auto;
+}
+
+.MTW_inner .label{
+	text-align: center;
+	width: 100%;
+}
+
+.MTW_inner #correct, .MTW_inner #incorrect{
+	text-align: center;
+	width: 100%;
+	font-weight: 900;
+}
+
+.answer{
+	margin-top: 10px;
+}
+
+.track_mobile{
+	color: #999;
+	font-size: 12pt;
+	margin-top: 2vw;
+}
+
+/*/////////guess options////////*/
+
+#guess_block{
+	display: inline-block;
+	width: 100%;
+	margin-top: 0;
+}
+
+.guesses{
+	display: inline-block;
+	margin: 0;
+	width: 100%;
+}
+
+.guess{
+	height: 39px;
+	line-height: 39px;
+}
+
+.guess span:first-child{
+	margin-left: 10px;
+}
+
+.guess .fa-right{
+	font-size: 19pt;
+	margin-right: 10px;
+}
+
+.next_placeholder{
+	display: inline-block;
+	width: 100%;
+	background-color: #fff;
+	height: 39px;
+}
+
+/*arrow next*/
+.fa-arrow-right{
+	font-size: 15pt;
+	display: inline-block;
+	position: relative;
+	bottom: 1.5px;
+}
+
+#score_block{
+	display: none;
+}
+
+/*//////////share///////////*/
+.footer{
+	display: none;
+}
+
+.footer_mobile{
+	margin: 6px 0 0 0;
+	height: 39px;
+	width: 100%;
+	display: inline-block;
+}
+
+.footer_mobile .twitter1{
+	height: 39px;
+	font-size: 20pt;
+	padding: 0 6px 0 8px;
+	margin: 0;
+	display: none;
+}
+
+.footer_mobile .twitter1 span{
+	display: inline-block;
+	padding: 0 7px 0 3px;
+	line-height: 39px;
+}
+
+.footer_mobile .logo img{
+	display: inline-block;
+	height: 29px;
+	float: right;
+}
+
+.footer_mobile .logo{
+	margin-top: 5px;
+}
+
+/*////////// end message popup ///////////*/
+
+.end_container_mobile{
+	width: 100%;
+	height: 80vh;
+	padding: 10vh 0 10vh 0;
+	display: none;
+	font-size: 15pt;
+	background: rgba(245,229,166,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(245,229,166,1)), color-stop(87%, rgba(247,217,96,1)), color-stop(100%, rgba(247,215,86,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(245,229,166,1) 0%, rgba(247,217,96,1) 87%, rgba(247,215,86,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5e5a6', endColorstr='#f7d756', GradientType=1 );
+}
+
+.end_button.twitter2, .end_button.replay{
+	min-width: 200px;
+}
+
+.end_container_mobile .fa-twitter, .end_container_mobile .fa-refresh{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+/*//////////special classes/////////////*/
+
+.show{
+	display: inline-block;
+}
+
+.hide{
+	display: none;
+}
+
+.hover_color{
+	background-color: #ccc;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.red{
+	background-color: rgba(234,70,61,.8);
+}
+
+.green{
+	background-color: #679663;
+	color: #fff;
+}
+
+.bar{
+	display: inline-block;
+	height: 100%;
+	width: 1%;
+	float: left;
+}
+
+.bar_green{
+	background-color: #679663;
+}
+
+.bar_red{
+	background-color: rgba(234,70,61,.8);
+	float: right;
+}
+
+.desktop{
+	display: none;
+}
