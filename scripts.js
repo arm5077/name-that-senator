@@ -206,9 +206,8 @@ $.getJSON("names.json", function(names){
 				$(guessButton).append("<i class='fa fa-check-circle fa-right'></i>");
 
 				//turning .guess green if correct name selected
-				$(guessButton).removeClass("hover_color");
 				$(guessButton).addClass("green");
-				
+				$(".guess").removeClass("hover_color");
 			}
 
 
@@ -223,7 +222,7 @@ $.getJSON("names.json", function(names){
 				$(".answer").append("<div class='bar bar_red'></div>");
 
 				//Turning .guess red if incorrect name selected
-				$(guessButton).removeClass("hover_color");
+				$(".guess").removeClass("hover_color");
 				$(guessButton).addClass("red");
 				
 				//and adding green checkmark to correct answer, after selecting wrong answer
@@ -234,8 +233,6 @@ $.getJSON("names.json", function(names){
 						$(currentGuess).append("<i class='fa fa-check-circle fa-right'></i>");
 					}
 				})
-
-
 			}
 			//add "next" button
  			$(".next").addClass("show");
@@ -249,8 +246,7 @@ $.getJSON("names.json", function(names){
 
 		//when twitter button appears
 		if (totalGuesses >= 12){
-			/*$(".twitter1").addClass("show");*/
-			$(".twitter1").css("display","inline-block");
+			$(".twitter1").css("opacity","100")
 		}
 
 		//when whole game fades in exchange for yellow screen
@@ -272,27 +268,3 @@ $.getJSON("names.json", function(names){
 
 
 });
-
-
-
-
-
-
-
-/*
-
-if (totalGuesses == 100){
-			$(".end_message").html("<div class='end_message_text'><span>FINAL SCORE:</span> You named <span>" + correctGuesses + " out of 100</span> senators correctly.</div>")
-			$(".end_message").addClass("show");
-			$(".next").removeClass("show");
-			$(".replay").addClass("show");
-		}
-
-
-var numbers = [34, 21, 53, 25];
-numbers.sort(function(a,b){
-	return b-a;
-});
-
-console.log(numbers);
-*/

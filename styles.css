@@ -196,7 +196,7 @@ img.photo_desktop{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	z-index: 999999;
+	z-index: 999;
 	padding: 2px 6px 2px 6px;
 	font-weight: 300;
 }
@@ -355,8 +355,14 @@ img.photo_desktop{
 	display: none;
 }
 
+/*.twitter1{
+	display: none;
+}*/
+
 .twitter1{
-	display:none;
+  transition: opacity 1s ease;
+  opacity: 0;
+  display: inline-block;
 }
 
 .fa{
