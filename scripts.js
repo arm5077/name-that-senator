@@ -163,14 +163,15 @@ $.getJSON("names.json", function(names){
 
 		hasGuessed = false;
 
+
+		//this is the bit that keeps track of what senator you're on, out of 100
 		$(".track_place").html((i+1) + " / 100");
 		$(".track_mobile").html((i+1) + "/100");
-		//$(".track_place").html("Senator " + (i+1) + "/100");
 
 
 		//passing it a blank string to reset values
 		$(".guesses").html("");
-		$(".image_block img").attr("src","img/" + names[i].Last_name.toLowerCase() + ".jpg")
+		$(".image_block img").attr("src","img/" + names[i].Last_name.toLowerCase() + ".jpg");
 		options.forEach(function(guess){
 			
 			//putting each "guess" into a new class that we definie in hard code as .guess. Have to 
@@ -186,6 +187,7 @@ $.getJSON("names.json", function(names){
 
 	}
 
+	//score bar mostly?
 
 	function answer(guess, answer, guessButton){
 
@@ -194,15 +196,19 @@ $.getJSON("names.json", function(names){
 
 			if(answer == guess){
 				correctGuesses++;
-				//add correct score desktop
+				//add correct written score desktop
 				$("#score_block #correct").html("Correct: <span>" + correctGuesses + "</span>");
-				//add correct score mobile
+				//add correct written score mobile
 				$(".MTW_inner #correct").html("<span>" + correctGuesses + "</span>");
 
-				//adding on score bars correct
-				$(guessButton).addClass("green");
+				//adding on green score bars for correct answers
 				$(".answer").prepend("<div class='bar bar_green'></div>");
 				$(guessButton).append("<i class='fa fa-check-circle fa-right'></i>");
+
+				//turning .guess green if correct name selected
+				$(guessButton).removeClass("hover_color");
+				$(guessButton).addClass("green");
+				
 			}
 
 
@@ -212,14 +218,15 @@ $.getJSON("names.json", function(names){
 				$("#score_block #incorrect").html("Incorrect: <span>" + incorrectGuesses + "</span>");
 				//add incorrect score mobile
 				$(".MTW_inner #incorrect").html("<span>" + incorrectGuesses + "</span>");
-
-				//******
-				$(guessButton).addClass("red");
 				
 				//adding on score bars incorrect
 				$(".answer").append("<div class='bar bar_red'></div>");
+
+				//Turning .guess red if incorrect name selected
+				$(guessButton).removeClass("hover_color");
+				$(guessButton).addClass("red");
 				
-				//turn correct answer green, after selecting wrong answer
+				//and adding green checkmark to correct answer, after selecting wrong answer
 				$(".guess").each(function(i, currentGuess){
 					
 					if($(currentGuess).html() == answer){
@@ -230,24 +237,28 @@ $.getJSON("names.json", function(names){
 
 
 			}
-			$(".next").addClass("show");
+			//add "next" button
+ 			$(".next").addClass("show");
 			$(".next_placeholder").addClass("hide");
+			//add sharing buttons
 			$(".twitter1 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
 			$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
 			}
 
 		var totalGuesses = (correctGuesses + incorrectGuesses); 
 
-
+		//when twitter button appears
 		if (totalGuesses >= 12){
 			/*$(".twitter1").addClass("show");*/
 			$(".twitter1").css("display","inline-block");
 		}
 
+		//when whole game fades in exchange for yellow screen
 		if (totalGuesses == 100){
 			$(".instrux").addClass("hide");
 		}
 
+		//bringing up yellow screen after whole game fades, upon reaching end.
 		if (totalGuesses == 100){
 			$(".container").delay(250).fadeOut(750);
 			$(".end_container").delay(1000).queue(function(){$(".end_container").addClass('show_inherit')});
