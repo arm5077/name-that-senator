@@ -238,8 +238,8 @@ $.getJSON("names.json", function(names){
  			$(".next").addClass("show");
 			$(".next_placeholder").addClass("hide");
 			//add sharing buttons
-			$(".twitter1 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
-			$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
+			$(".twitter1 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20http://njour.nl/s/120721");
+			$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20http://njour.nl/s/120721");
 			}
 
 		var totalGuesses = (correctGuesses + incorrectGuesses); 
@@ -268,3 +268,5 @@ $.getJSON("names.json", function(names){
 
 
 });
+
+//$(".twitter2 a").attr("href", "https://twitter.com/intent/tweet?text=" + "I%20correctly%20ID'd%20" + correctGuesses + "/" + (correctGuesses + incorrectGuesses) + "%20U.S.%20senators%20with%20National%20Journal's%20Senate%20Flashcards.%20Give%20it%20a%20shot:%20" + window.location);
