@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 720px) {
 
 html, body{
     height: 100%;
@@ -17,7 +17,6 @@ html, body{
 }
 
 .big_container{
-	width: 100%;
 	margin: 0 auto;
 	padding: 0;
 	vertical-align: middle;
@@ -26,6 +25,8 @@ html, body{
 	-moz-box-shadow: 0 0 0 0 #fff;
 	box-shadow: 0 0 0 0 #fff;
 	display: block;
+	width: 100%;
+	max-width: 450px;
 }
 
 .container{

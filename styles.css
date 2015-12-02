@@ -33,12 +33,12 @@ a{
 	position: fixed;
 	z-index: 9999999;
 	background-color: #f7d857;
-	width: 60%;
+	width: 70%;
 	height: 65px;
 	box-shadow: 0 0 10px black;
 	padding: 0;
 	top: 0;
-	right: 20%;
+	right: 15%;
 	margin: -10px auto 0 auto;
 	border-radius: 5px;
 }
@@ -46,7 +46,7 @@ a{
 .instrux_box{
 	margin: 17px auto 0 auto;
 	text-align: center;
-	width: 768px;
+	width: 100%;
 	font-size: 14pt;
 	}
 
