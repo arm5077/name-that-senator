@@ -8,6 +8,10 @@ html, body{
     padding: 0;
 }
 
+.window{
+	display: none;
+}
+
 .overlayDark{
 	display: none;
 }
@@ -16,17 +20,23 @@ html, body{
 	display: none;
 }
 
-.big_container{
+.window_mobile{
+	display: block;
+	padding: 0 4% 0 2%;
+	width: 96%;
+}
+
+.big_container_mobile{
+	vertical-align: middle;
 	margin: 0 auto;
 	padding: 0;
-	vertical-align: middle;
-	border-radius: 0;
-	-webkit-fobox-shadow: 0 0 0 0 #fff;
-	-moz-box-shadow: 0 0 0 0 #fff;
-	box-shadow: 0 0 0 0 #fff;
 	display: block;
 	width: 100%;
 	max-width: 450px;
+}
+
+.big_container{
+	display: none;
 }
 
 .container{
@@ -45,7 +55,7 @@ html, body{
 }
 
 .header{
-	font-size: 25pt;
+	font-size: 24pt;
 	display: inline-block;
 	padding: 0;
 	margin: 0 0 5px 0;
@@ -75,7 +85,7 @@ html, body{
 	vertical-align: top;
 	width: 42%;
 	text-align: center;
-	margin: 7vw 0 0 1vw;
+	margin: 0 0 0 1vw;
 }
 
 .MTW_inner{
@@ -254,8 +264,4 @@ html, body{
 .bar_red{
 	background-color: rgba(234,70,61,.8);
 	float: right;
-}
-
-.desktop{
-	display: none;
 }

@@ -6,14 +6,15 @@ var hasGuessed = false;
 
 var instruxShowing = true; 
 
+
 //cookies
  $(document).ready(function() {
         // check cookie
         var visited = $.cookie("visited");
 
         if (visited != null) {
-            $(".overlayLight").addClass("hide");
-      		$(".overlayDark").addClass("hide");
+            //$(".overlayLight").addClass("hide");
+      		//$(".overlayDark").addClass("hide");
       		instruxShowing = false;
         }
 
@@ -82,7 +83,6 @@ $.getJSON("names.json", function(names){
 			case 13:
 				key.preventDefault();
 				if(instruxShowing == true){
-					/*$(".overlayLight").addClass("hide");*/
 					$(".overlayLight").fadeOut(350);
 					$(".overlayDark").addClass("hide");
 					instruxShowing = false;
@@ -98,7 +98,7 @@ $.getJSON("names.json", function(names){
 					hasGuessed = false;
 				}
 			
-
+					
 			break;
 			case 39:
 				key.preventDefault();
@@ -245,7 +245,7 @@ $.getJSON("names.json", function(names){
 		var totalGuesses = (correctGuesses + incorrectGuesses); 
 
 		//when twitter button appears
-		if (totalGuesses >= 12){
+		if (totalGuesses >= 10){
 			$(".twitter1").css("opacity","100")
 		}
 
