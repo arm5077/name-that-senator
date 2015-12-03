@@ -6,21 +6,22 @@ var hasGuessed = false;
 
 var instruxShowing = true; 
 
-
+var keyGuess = false;
+/*
 //cookies
  $(document).ready(function() {
         // check cookie
         var visited = $.cookie("visited");
 
         if (visited != null) {
-            //$(".overlayLight").addClass("hide");
-      		//$(".overlayDark").addClass("hide");
+            $(".overlayLight").addClass("hide");
+      		$(".overlayDark").addClass("hide");
       		instruxShowing = false;
         }
 
         // set cookie
         $.cookie("visited", { expires: 30});
-    });
+    });*/
 
 
 //selecting initial button that verifies user read instrux
@@ -56,7 +57,9 @@ $.getJSON("names.json", function(names){
 			//up
 			case 38:
 				key.preventDefault();
-				if(instruxShowing == false){
+				var width = $(window).width();
+				keyGuess = true;
+				if(instruxShowing == false || width <= 720){
 					if (hoveredButton == null){
 						hoveredButton = 3;
 					}else if(hoveredButton == 0){
@@ -69,7 +72,9 @@ $.getJSON("names.json", function(names){
 			//down
 			case 40:
 				key.preventDefault();
-				if(instruxShowing == false){
+				width = $(window).width();
+				keyGuess = true;
+				if(instruxShowing == false || width <= 720){
 					if (hoveredButton == null){
 						hoveredButton = 0;
 					}else if(hoveredButton == 3){
@@ -79,10 +84,13 @@ $.getJSON("names.json", function(names){
 					}
 				}	
 			break;
+
 			// enter key
 			case 13:
 				key.preventDefault();
-				if(instruxShowing == true){
+				width = $(window).width();
+				keyGuess = true;
+				if(instruxShowing == true && width > 720){
 					$(".overlayLight").fadeOut(350);
 					$(".overlayDark").addClass("hide");
 					instruxShowing = false;
@@ -244,6 +252,14 @@ $.getJSON("names.json", function(names){
 
 		var totalGuesses = (correctGuesses + incorrectGuesses); 
 
+		//fixes the way overlay comes up if you resize from mobile to desktop. 
+
+		if (keyGuess == true || hasGuessed == true){
+            $(".overlayLight").addClass("hide");
+      		$(".overlayDark").addClass("hide");
+      		instruxShowing = false;
+        }
+
 		//when twitter button appears
 		if (totalGuesses >= 10){
 			$(".twitter1").css("opacity","100")
@@ -264,7 +280,6 @@ $.getJSON("names.json", function(names){
 
 
 	}
-
 
 
 });

@@ -22,7 +22,7 @@ html, body{
 
 .window_mobile{
 	display: block;
-	padding: 0 4% 0 2%;
+	padding: 0 4% 0 0;
 	width: 96%;
 }
 

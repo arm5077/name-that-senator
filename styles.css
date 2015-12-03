@@ -27,6 +27,15 @@ a{
 	padding: 0 800px 0 0;
 	top: 0;
 	margin: 0 0 0 -100px;
+	/*position: fixed;
+	z-index: 99999;
+	background-color: rgba(0,0,0,.7);
+	width: 746px;
+	margin: 60px auto;
+	padding: 40px 0 40px 0;
+	border-radius: 10px;
+	vertical-align: middle;
+	height: 386px;*/
 }
 
 .overlayLight{
